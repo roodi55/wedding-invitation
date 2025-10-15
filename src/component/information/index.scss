@@ -1,4 +1,8 @@
 .information {
+  h3{
+    font-size: 1.4rem;
+  }
+
   .info-card {
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
@@ -28,17 +32,21 @@
   width: 22rem;
 
   .header {
-    .title {
-      text-align: center;
-      font-size: 1.2rem;
-      color: var(--theme-color);
-      padding-bottom: 1rem;
-      border-bottom: 1px solid var(--dark-grey-color);
-    }
+
+    // .title {
+    //   text-align: center;
+    //   font-size: 1.2rem;
+    //   color: var(--dark-color);
+    //   padding-bottom: 1rem;
+    //   border-bottom: 1px solid var(--dark-grey-color);
+    //   border-radius: 10px;
+    // }
   }
   .content {
-    padding: 0 0.7rem 0.7rem 0.7rem;
-
+    padding: 1.3rem 1.7rem 0 1.7rem;
+    .account-info:not(:last-child) {
+      border-bottom: 1px solid var(--dark-grey-color);
+    }
     .account-info {
       margin-top: 1rem;
       margin-bottom: 1rem;
@@ -46,6 +54,14 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+      padding-bottom: 1rem;
+      // border-bottom: 1px solid var(--dark-grey-color);
+      .title{
+        width: 100%;
+        font-size: 1.2rem;
+        font-weight: 700;
+        padding-bottom: 1rem;
+      }
       .name {
         margin-bottom: 0.3rem;
         .relation {
@@ -54,7 +70,7 @@
       }
       .copy-button {
         font-size: 0.8rem;
-        padding: 0.4rem 0.8rem;
+        padding: 0.6rem 1rem;
       }
     }
   }
@@ -62,6 +78,13 @@
   .footer {
     display: flex;
     flex-direction: column;
+    .border-box{
+      border: 1px solid var(--dark-color);
+      padding: 10px;
+      margin: 0 1rem 1.2rem 1rem;
+      color: var(--dark-color);
+      font-weight: 600;
+    }
   }
 }
 

@@ -1,16 +1,52 @@
 .invitation {
+  
+  h3{
+    font-size: 1.4rem;
+    // color: var(--point-color);
+  }
+
+  background-image: url('../../images/bg1.png');
+  position: relative;
+  // height: 100vh; /* 화면 전체 높이 */
+  background-repeat: no-repeat;
+  background-position: center 105%; /* 수평 중앙, 수직 50% (화면 중간) */
+  background-size: contain; /* 또는 cover */
+
+.image-wrapper {
+  padding: 50px 0;;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  // display: flex;
+  align-items: center;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
   .content {
-    margin-top: 0.8rem;
-    margin-bottom: 0.8rem;
-    font-size: 0.9rem;
+    // color: var(--point-color);
+    font-family: "koPobMedium";
+    font-weight: 500;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+    // font-size: 0.8rem;
+  }
+
+  .name-wrapper{
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 
   .name {
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    // margin-bottom: 0.5rem;
     font-size: 1.1rem;
+    // color: var(--white-color);
     .relation {
-      font-size: 0.75rem;
+      // font-size: 0.75rem;
       opacity: 0.7;
 
       .relation-name {
@@ -29,7 +65,7 @@
       text-align: center;
       .title {
         font-size: 1.2rem;
-        color: var(--theme-color);
+        // color: var(--theme-color);
         padding: 0.5rem;
       }
       .subtitle {

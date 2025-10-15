@@ -3,8 +3,6 @@ import { useKakao, useNaver } from "../store"
 import nmapIcon from "../../icons/nmap-icon.png"
 import knaviIcon from "../../icons/knavi-icon.png"
 import tmapIcon from "../../icons/tmap-icon.png"
-import LockIcon from "../../icons/lock-icon.svg?react"
-import UnlockIcon from "../../icons/unlock-icon.svg?react"
 import {
   KMAP_PLACE_ID,
   LOCATION,
@@ -18,12 +16,9 @@ export const Map = () => {
 }
 
 const NaverMap = () => {
+  
   const naver = useNaver()
   const kakao = useKakao()
-  const ref = useRef<HTMLDivElement>(null)
-  const [locked, setLocked] = useState(true)
-  const [showLockMessage, setShowLockMessage] = useState(false)
-  const lockMessageTimeout = useRef<NodeJS.Timeout>()
 
   const checkDevice = () => {
     const userAgent = window.navigator.userAgent
@@ -36,65 +31,9 @@ const NaverMap = () => {
     }
   }
 
-  useEffect(() => {
-    if (naver) {
-      const map = new naver.maps.Map(ref.current, {
-        center: WEDDING_HALL_POSITION,
-        zoom: 17,
-      })
-
-      new naver.maps.Marker({ position: WEDDING_HALL_POSITION, map })
-
-      return () => {
-        map.destroy()
-      }
-    }
-  }, [naver])
-
   return (
     <>
-      <div className="map-wrapper">
-        {locked && (
-          <div
-            className="lock"
-            onTouchStart={() => {
-              setShowLockMessage(true)
-              clearTimeout(lockMessageTimeout.current)
-              lockMessageTimeout.current = setTimeout(
-                () => setShowLockMessage(false),
-                3000,
-              )
-            }}
-            onMouseDown={() => {
-              setShowLockMessage(true)
-              clearTimeout(lockMessageTimeout.current)
-              lockMessageTimeout.current = setTimeout(
-                () => setShowLockMessage(false),
-                3000,
-              )
-            }}
-          >
-            {showLockMessage && (
-              <div className="lock-message">
-                <LockIcon /> 자물쇠 버튼을 눌러
-                <br />
-                터치 잠금 해제 후 확대 및 이동해 주세요.
-              </div>
-            )}
-          </div>
-        )}
-        <button
-          className={"lock-button" + (locked ? "" : " unlocked")}
-          onClick={() => {
-            clearTimeout(lockMessageTimeout.current)
-            setShowLockMessage(false)
-            setLocked((locked) => !locked)
-          }}
-        >
-          {locked ? <LockIcon /> : <UnlockIcon />}
-        </button>
-        <div className="map-inner" ref={ref}></div>
-      </div>
+    
       <div className="navigation">
         <button
           onClick={() => {

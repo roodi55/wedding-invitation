@@ -278,7 +278,7 @@ export const Gallery = () => {
 
   return (
     <LazyDiv className="card gallery">
-      <h2 className="english">Gallery</h2>
+      <h3 className="english"><div>우리의 프롤로그,</div><div>미리보기</div></h3>
       <div className="carousel-wrapper">
         <div
           className="carousel"
@@ -357,7 +357,7 @@ export const Gallery = () => {
 
       <div className="break" />
 
-      <Button
+      {/* <Button
         onClick={() =>
           openModal({
             className: "all-photo-modal",
@@ -399,7 +399,7 @@ export const Gallery = () => {
         }
       >
         사진 전체보기
-      </Button>
+      </Button> */}
     </LazyDiv>
   )
 }

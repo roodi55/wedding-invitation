@@ -14,48 +14,51 @@ import {
 import { useModal } from "../modal"
 import { Button } from "../button"
 import { LazyDiv } from "../lazyDiv"
-import PhoneIcon from "../../icons/phone-flip-icon.svg?react"
-import EnvelopeIcon from "../../icons/envelope-icon.svg?react"
+import { IMAGE2 } from "../../images"
 
 export const Invitation = () => {
   const { openModal, closeModal } = useModal()
   return (
     <LazyDiv className="card invitation">
-      <h2 className="english">Invitation</h2>
+      <h3 className="english">초대합니다</h3>
 
       <div className="break" />
 
-      <div className="content">싱그러운 여름 향기 가득한 날</div>
-      <div className="content">소중한 분들을 모시고</div>
-      <div className="content">사랑의 약속을 하려고 합니다.</div>
-      <div className="break" />
-      <div className="content">햇살이 뜨거울 땐 가려주고,</div>
-      <div className="content">비가 오면 우산이 되어주는</div>
-      <div className="content">부부가 되겠습니다.</div>
-      <div className="break" />
-      <div className="content">기쁜날 함께 하시어</div>
-      <div className="content">저희의 앞날을 축복해 주세요.</div>
-
-      <div className="break" />
-
-      <div className="name">
-        {GROOM_FATHER} · {GROOM_MOTHER}
-        <span className="relation">
-          의 <span className="relation-name">{GROOM_TITLE}</span>
-        </span>{" "}
-        {GROOM_FULLNAME}
-      </div>
-      <div className="name">
-        {BRIDE_FATHER} · {BRIDE_MOTHER}
-        <span className="relation">
-          의 <span className="relation-name">{BRIDE_TITLE}</span>
-        </span>{" "}
-        {BRIDE_FULLNAME}
+      <div className="image-wrapper">
+        <img src={IMAGE2} alt="sample" />
       </div>
 
+      <div className="content">모든 시작이 11월이었던</div>
+      <div className="content">우리의 이야기에</div>
+      <br/>
+      <div className="content">영원이라는</div>
+      <div className="content">제목을 붙입니다.</div>
+      <br/>
+      <div className="content">저희의 가장 행복한 순간,</div>
+      <div className="content">여러분의 축복으로 함께 빛내주세요</div>
+
       <div className="break" />
 
-      <Button
+      <div className="name-wrapper">
+        <div className="name">
+          {GROOM_FATHER} · {GROOM_MOTHER}
+          <span className="relation">
+            의 <span className="relation-name">{GROOM_TITLE}</span>
+          </span>{" "}
+          {GROOM_FULLNAME}
+        </div>
+        <div className="name">
+          {BRIDE_FATHER} · {BRIDE_MOTHER}
+          <span className="relation">
+            의 <span className="relation-name">{BRIDE_TITLE}</span>
+          </span>{" "}
+          {BRIDE_FULLNAME}
+        </div>
+      </div>
+
+      <div className="break" />
+
+      {/* <Button
         onClick={() => {
           openModal({
             className: "contact-modal",
@@ -133,7 +136,7 @@ export const Invitation = () => {
         }}
       >
         연락하기
-      </Button>
+      </Button> */}
     </LazyDiv>
   )
 }

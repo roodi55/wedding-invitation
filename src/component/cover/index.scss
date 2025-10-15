@@ -1,41 +1,26 @@
 .cover {
-  .wedding-date {
-    margin-top: 2rem;
-    font-size: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    .divider {
-      background-color: var(--dark-color);
-      width: 1px;
-      height: 0.7rem;
-    }
-  }
+  box-sizing: border-box !important;
+  padding-top: 100px !important;
+  color: var(--head-font-color);
 
-  .wedding-day-of-week {
-    font-size: 1.2rem;
-    opacity: 0.7;
-    margin-bottom: 1rem;
+  .info {
+    margin-top: 0.3rem;
+    font-weight: 700;
+    font-size: 1.1rem;
   }
 
   .image-wrapper {
+    padding: 50px 0;;
     width: 100%;
     height: 30rem;
+    display: block;
     overflow: hidden;
-    display: flex;
     align-items: center;
     img {
-      width: 100%;
+      width: 90%;
       height: auto;
+      z-index: 1
     }
-  }
-
-  .subtitle {
-    font-size: 1.5rem;
-    font-family: "Allura";
-    color: var(--alt-color);
-    margin-top: 1rem;
   }
 
   .names {
@@ -45,14 +30,6 @@
     justify-content: center;
     align-items: center;
     gap: 0.7rem;
-    .divider {
-      background-color: var(--dark-color);
-      width: 1px;
-      height: 0.7rem;
-    }
   }
-  .info {
-    margin-bottom: 0.3rem;
-    opacity: 0.7;
-  }
+
 }

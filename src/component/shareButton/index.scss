@@ -1,8 +1,18 @@
 .share-button {
+
+  button{
+    box-shadow: 0 0 0.2rem 0 rgba(0, 0, 0, 0.2);
+    // box-sizing: border-box;
+    padding: 15px 100px;
+    border-radius: 10px;
+    background-color: #d2d2d2;
+
+  }
   .ktalk-share {
     position: relative;
     z-index: 3;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    font-weight: 600;
     display: inline-block;
     img {
       width: 0.7rem;

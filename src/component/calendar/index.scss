@@ -1,9 +1,36 @@
 .calendar {
+  h3{
+    font-size: 1.4rem;
+    color: var(--head-font-color);
+  }
+  .date{
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: var(--point-font-color);
+  }
+
+  .detail{
+    opacity: 70%;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  .hr {
+    border: none;
+    border-top: 2px solid var(--font-color);
+    // margin: 0.5;
+    width: 100%;
+  }
+
+  .light {
+    border-top: 0.5px solid var(--font-color);
+  }
+
   .calendar-wrapper {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    margin: 1rem;
-    border: 1px solid var(--light-grey-color);
+    margin: 0.5rem;
+    color: var(--day-font-color);
 
     > div {
       aspect-ratio: 1;
@@ -13,12 +40,13 @@
 
       &.head {
         aspect-ratio: auto;
-        background-color: var(--light-grey-color);
+        font-weight: bold;
+        color: var(--day-font-color);
       }
 
       &.holiday {
         > span {
-          color: var(--red-color);
+          // color: var(--day-font-color);
         }
       }
 
@@ -27,14 +55,19 @@
 
         > span {
           z-index: 1;
+          // color: var(--white-color);
         }
 
         > div.heart {
-          width: 50%;
-          height: 50%;
-          background: var(--theme-bg-color);
-          top: 35%;
-          left: 25%;
+          // width: 50%;
+          // height: 50%;
+          width: 70%;
+          height: 70%;
+          border-radius: 2px;
+          background-color: rgba(var(--date-bg-color), 0.3);
+          border-radius: 50%;
+          // top: 35%;
+          // left: 25%;
           position: absolute;
           transform: rotate(45deg);
           z-index: 0;
@@ -46,7 +79,7 @@
             top: -50%;
             left: 0%;
             border-radius: 50%;
-            background: var(--theme-bg-color);
+            // background-color: rgba(var(--date-bg-color), 0.5);
           }
           &::after {
             content: "";
@@ -55,10 +88,23 @@
             position: absolute;
             left: -50%;
             border-radius: 50%;
-            background: var(--theme-bg-color);
+            // background-color: rgba(var(--date-bg-color), 0.5);
           }
         }
       }
+    }
+  }
+
+  .image-wrapper {
+    padding: 50px 0;;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    // display: flex;
+    align-items: center;
+    img {
+      width: 70%;
+      height: auto;
     }
   }
 
@@ -91,7 +137,7 @@
       margin-top: 2rem;
       margin-bottom: 1.5rem;
       .d-day {
-        color: var(--theme-color);
+        // color: var(--theme-color);
       }
     }
   }

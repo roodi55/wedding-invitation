@@ -1,11 +1,10 @@
 import { useEffect, useMemo, useState } from "react"
 import {
-  BRIDE_FIRSTNAME,
-  GROOM_FIRSTNAME,
   HOLIDAYS,
   WEDDING_DATE,
 } from "../../const"
 import { LazyDiv } from "../lazyDiv"
+import { IMAGE1 } from "../../images"
 
 const firstDayOfWeek = WEDDING_DATE.startOf("month").day()
 const daysInMonth = WEDDING_DATE.daysInMonth()
@@ -41,31 +40,38 @@ export const Calendar = () => {
 
   return (
     <LazyDiv className="card calendar">
-      <h2 className="english">The Wedding Day</h2>
+      <h3 className="english">결혼합니다</h3>
       <div className="break" />
-      {WEDDING_DATE.format("YYYY년 MMMM D일 dddd A h시")}
+      <div className="date">
+        {WEDDING_DATE.format("MM")}
+      </div>
+      <div className="break"></div>
+      <div className="hr"/>
       <div className="calendar-wrapper">
         <div className="head holiday">
-          <span>Su</span>
+          <span>일</span>
         </div>
         <div className="head">
-          <span>Mo</span>
+          <span>월</span>
         </div>
         <div className="head">
-          <span>Tu</span>
+          <span>화</span>
         </div>
         <div className="head">
-          <span>We</span>
+          <span>수</span>
         </div>
         <div className="head">
-          <span>Th</span>
+          <span>목</span>
         </div>
         <div className="head">
-          <span>Fr</span>
+          <span>금</span>
         </div>
         <div className="head">
-          <span>Sa</span>
+          <span>토</span>
         </div>
+      </div>
+      <div className="hr light"/>
+      <div className="calendar-wrapper">
         {Array.from({ length: firstDayOfWeek }).map((_, i) => (
           <div key={i} />
         ))}
@@ -97,8 +103,14 @@ export const Calendar = () => {
           )
         })}
       </div>
+      <div className="date detail">
+        {WEDDING_DATE.format("MM월 D일 ")+WEDDING_DATE.format("dddd A h시")}
+      </div>
+      <div className="image-wrapper">
+        <img src={IMAGE1} alt="sample" />
+      </div>
       <div className="countdown-wrapper">
-        <div className="countdown">
+        {/* <div className="countdown">
           <div className="unit">DAY</div>
           <div />
           <div className="unit">HOUR</div>
@@ -113,8 +125,8 @@ export const Calendar = () => {
           <div className="count">{diffs.minutes}</div>
           <span>:</span>
           <div className="count">{diffs.seconds}</div>
-        </div>
-        <div className="message">
+        </div> */}
+        {/* <div className="message">
           {GROOM_FIRSTNAME} & {BRIDE_FIRSTNAME}의 결혼식이{" "}
           {dayDiff > 0 ? (
             <>
@@ -127,7 +139,7 @@ export const Calendar = () => {
               <span className="d-day">{-dayDiff}</span>일 지났습니다.
             </>
           )}
-        </div>
+        </div> */}
       </div>
     </LazyDiv>
   )
