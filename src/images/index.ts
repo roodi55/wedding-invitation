@@ -11,6 +11,7 @@ import list6 from "./list6.JPG"
 import list7 from "./list7.jpg"
 import list8 from "./list8.jpg"
 import list9 from "./list9.JPG"
+import list10 from "./list9.jpg"
 import list11 from "./list11.JPG"
 import list12 from "./list12.jpg"
 import list13 from "./list13.JPG"
@@ -19,7 +20,7 @@ import list15 from "./list15.jpg"
 import list16 from "./list16.jpg"
 import list18 from "./list17.jpg"
 import list17 from "./list18.JPG"
-import list19 from "./list19.jpg"
+import list19 from "./list19.JPG"
 import list20 from "./list20.jpg"
 import list21 from "./list21.jpg"
 import list22 from "./list22.JPG"
@@ -47,6 +48,7 @@ export const GALLERY_IMAGES = [
   list7,
   list8,
   list9,
+  list10,
   list11,
   list12,
   list13,
