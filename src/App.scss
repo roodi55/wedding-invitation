@@ -17,14 +17,19 @@
   --normal-font-color: #222;
 
   --date-bg-color: 98, 108, 70;
+  --dark-grey-color: #d2d2d2;
+  --white-color: #ffffff;
+
+  // check
   // --theme-bg-color: #F3F2D9;
-  // // --alt-color: #c28080;
-  // // --alt-bg-color: #f4f0f0;
+  --alt-color: #6f7757;
+  // --alt-bg-color: #f4f0f0;
+
   // --dark-color: #282c34;
-  // --dark-grey-color: #d2d2d2;
+ 
   // --light-grey-color: #eaeaea;
-  // --light-color: #F4EEE3;
-  // --white-color: #ffffff;
+  --light-color: #F4EEE3;
+  
   // --red-color: #ff0000;
 
   // --dark-font-color: #626C46;
@@ -42,10 +47,6 @@
   body {
     print-color-adjust: exact;
   }
-}
-
-body {
-  font-family: 'SeoulHangang', sans-serif;
 }
 
 $colors: (
@@ -95,10 +96,13 @@ button {
 }
 
 body {
+  font-family: 'SeoulHangang', sans-serif;
   margin: 0;
   overflow-x: hidden;
   overflow-y: auto;
   height: 100vh;
+  // width: 600px;
+
   &.modal-open {
     overflow-y: hidden;
   }
@@ -127,7 +131,7 @@ body {
     text-align: center;
 
     @media (max-width: 980px) {
-      width: 500px;
+      width: 600px;
     }
 
     @media (max-width: 500px) {

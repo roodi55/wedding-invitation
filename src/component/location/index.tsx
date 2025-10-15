@@ -51,14 +51,15 @@ export const Location = () => {
           </div>
           <div className="content">
             <div className="heading">주차안내</div>
-            먼저 건물 내부 주차장(2층)으로 와주세요.   
+            <div className="colored">먼저 건물 내부 주차장(2층)으로 와주세요.</div>
             <br />
             ▪️웨딩홀 건물 내부 주차 (1시간 30분 무료)
             <br />
             ▪️만차 시 발렛으로 외부 주차 (2시간 30분 무료)
             <br />
             <br />
-            <div className="added">예식 후 출차 시 웨딩홀 입구에서 셔틀버스 탑승 후 외부 주차장으로 이동 (5분 소요)</div>
+            <div className="added">예식 후 출차 시 웨딩홀 입구에서 셔틀버스 탑승 후</div>
+            <div className="added">외부 주차장으로 이동 (5분 소요)</div>
           </div>
         </div>
         <div className="hr" />

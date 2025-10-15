@@ -343,7 +343,7 @@ export const Gallery = () => {
           </div>
         </div>
         <div className="carousel-indicator">
-          {CAROUSEL_ITEMS.map((_, idx) => (
+          {/* {CAROUSEL_ITEMS.map((_, idx) => (
             <button
               key={idx}
               className={`indicator${idx === slide ? " active" : ""}`}
@@ -351,7 +351,11 @@ export const Gallery = () => {
                 onIndicatorClick(statusRef.current, slideRef.current, idx)
               }
             />
-          ))}
+          ))} */}
+          <div
+            className="carousel-progress__fill"
+            style={{ width: `${((slide + 1) / CAROUSEL_ITEMS.length) * 100}%` }}
+          />
         </div>
       </div>
 

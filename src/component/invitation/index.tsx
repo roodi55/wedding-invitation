@@ -28,14 +28,12 @@ export const Invitation = () => {
         <img src={IMAGE2} alt="sample" />
       </div>
 
-      <div className="content">모든 시작이 11월이었던</div>
-      <div className="content">우리의 이야기에</div>
+      <div className="content">저희의 가장 행복한 순간을</div>
+      <div className="content">소중한 여러분과 함께 나누고 싶습니다.</div>
       <br/>
-      <div className="content">영원이라는</div>
-      <div className="content">제목을 붙입니다.</div>
-      <br/>
-      <div className="content">저희의 가장 행복한 순간,</div>
-      <div className="content">여러분의 축복으로 함께 빛내주세요</div>
+      <div className="content">따뜻한 마음으로 축복해 주신다면</div>
+      <div className="content">그날이 더욱 빛나고</div>
+      <div className="content">오랫동안 기억될 것입니다.</div>
 
       <div className="break" />
 
