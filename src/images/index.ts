@@ -26,7 +26,7 @@ import list22 from "./list22.JPG"
 import list23 from "./list23.jpg"
 import list24 from "./list24.jpg"
 import list25 from "./list25.JPG"
-import list26 from "./list26.JPG"
+import list26 from "./list26.jpg"
 
 import map from "./map.png"
 import bg1 from "./bg1.png"
