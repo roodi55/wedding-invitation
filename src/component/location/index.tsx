@@ -22,21 +22,24 @@ export const Location = () => {
       <LazyDiv className="card location">
       <div className="hr" />
       <div className="location-info">
-          <div className="transportation-icon-wrapper">
+          {/* <div className="transportation-icon-wrapper">
             <FontAwesomeIcon className="transportation-icon" icon={faBus} />
-          </div>
+          </div> */}
           <div className="content">
             <div className="heading">버스</div>
-            ▪️간선(파랑): 147, 463 | 지선(초록): 4211 | 광역: 3600, 9600
+            ▪️간선(파랑): 147, 463
+            <br/>
+            ▪️지선(초록): 4211 
+            ▪️광역: 3600, 9600
             <br/>
             ▪️차병원(역삼방면) 하차 후 역삼역 방면 50m 앞 우측 건물
           </div>
         </div>
         <div className="hr" />
         <div className="location-info">
-          <div className="transportation-icon-wrapper">
+          {/* <div className="transportation-icon-wrapper">
             <FontAwesomeIcon className="transportation-icon" icon={faTrainSubway} />
-          </div>
+          </div> */}
           <div className="content">
             <div className="heading">지하철</div>
             ▪️9호선 언주역 7번 출구에서 정면방향 150m (도보3분)
@@ -46,9 +49,9 @@ export const Location = () => {
         </div>
         <div className="hr" />
         <div className="location-info">
-          <div className="transportation-icon-wrapper">
+          {/* <div className="transportation-icon-wrapper">
             <FontAwesomeIcon className="transportation-icon" icon={faCarRear} />
-          </div>
+          </div> */}
           <div className="content">
             <div className="heading">주차안내</div>
             <div className="colored">먼저 건물 내부 주차장(2층)으로 와주세요.</div>

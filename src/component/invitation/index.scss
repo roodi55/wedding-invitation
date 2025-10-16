@@ -1,15 +1,15 @@
 .invitation {
 
   h3{
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     color: var(--head-font-color);
   }
 
   background-image: url('../../images/bg1.png');
   position: relative;
-  // height: 100vh; /* 화면 전체 높이 */
+  height: 100vh; /* 화면 전체 높이 */
   background-repeat: no-repeat;
-  background-position: center 105%; /* 수평 중앙, 수직 50% (화면 중간) */
+  background-position: center 110%; /* 수평 중앙, 수직 50% (화면 중간) */
   background-size: contain; /* 또는 cover */
 
 .image-wrapper {
@@ -31,7 +31,7 @@
     font-weight: 500;
     margin-top: 0.2rem;
     margin-bottom: 0.2rem;
-    // font-size: 0.8rem;
+    font-size: 1.2rem;
   }
 
   .name-wrapper{
@@ -42,7 +42,7 @@
   .name {
     margin-top: 1rem;
     // margin-bottom: 0.5rem;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: var(--theme-bg-color);
     .relation {
       font-size: 0.9rem;
