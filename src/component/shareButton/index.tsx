@@ -44,12 +44,12 @@ export const ShareButton = () => {
                   window.location.protocol +
                   "//" +
                   window.location.host +
-                  baseUrl,
+                  baseUrl+"wedding-invitation",
                 webUrl:
                   window.location.protocol +
                   "//" +
                   window.location.host +
-                  baseUrl,
+                  baseUrl+"wedding-invitation",
               },
             },
             buttons: [

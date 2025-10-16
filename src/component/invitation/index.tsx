@@ -25,6 +25,7 @@ export const Invitation = () => {
         <img src={IMAGE2} alt="sample" />
       </div>
 
+      <div className="break" />
       <div className="content">저희의 가장 행복한 순간을</div>
       <div className="content">소중한 여러분과 함께 나누고 싶습니다.</div>
       <br/>
