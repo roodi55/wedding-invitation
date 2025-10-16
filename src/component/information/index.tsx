@@ -12,9 +12,9 @@ export const Information1 = () => {
     <>
       <div className="info-card">
         <h3 className="english">신랑 & 신부에게 마음 전하기</h3>
-        <div className="content">
+        {/* <div className="content">
           축복의 의미로 축의금을 전달해보세요.
-        </div>
+        </div> */}
 
         <div className="break" />
         <div className="break" />
@@ -70,7 +70,7 @@ export const Information1 = () => {
             })
           }}
         >
-          신랑 측 계좌번호
+          신랑측 계좌번호
         </Button>
         <div className="break" />
         <Button
@@ -124,7 +124,7 @@ export const Information1 = () => {
             })
           }}
         >
-          신부 측 계좌번호
+          신부측 계좌번호
         </Button>
       </div>
     </>

@@ -1,4 +1,3 @@
-import { useEffect, useState, useRef } from "react"
 import { useKakao, useNaver } from "../store"
 import nmapIcon from "../../icons/nmap-icon.png"
 import knaviIcon from "../../icons/knavi-icon.png"

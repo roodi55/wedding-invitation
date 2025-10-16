@@ -1,33 +1,26 @@
 import coverImage from "./cover.png"
 import image1 from "./image1.JPG"
-import image2 from "./image2.png"
+import image2 from "./image2.JPG"
 
-import list1 from "./list1.jpg"
-import list2 from "./list2.jpg"
-import list3 from "./list3.JPG"
-import list4 from "./list4.jpg"
-import list5 from "./list5.jpg"
-import list6 from "./list6.JPG"
-import list7 from "./list7.jpg"
-import list8 from "./list8.jpg"
-import list9 from "./list9.JPG"
-import list10 from "./list10.jpg"
-import list11 from "./list11.JPG"
-import list12 from "./list12.jpg"
-import list13 from "./list13.JPG"
-import list14 from "./list14.jpg"
-import list15 from "./list15.jpg"
-import list16 from "./list16.jpg"
-import list18 from "./list17.jpg"
-import list17 from "./list18.JPG"
-import list19 from "./list19.JPG"
-import list20 from "./list20.jpg"
-import list21 from "./list21.jpg"
-import list22 from "./list22.JPG"
-import list23 from "./list23.jpg"
-import list24 from "./list24.jpg"
-import list25 from "./list25.JPG"
-import list26 from "./list26.jpg"
+import list1 from "./1.JPG"
+import list2 from "./2.jpg"
+import list3 from "./3.jpg"
+import list4 from "./4.jpg"
+import list5 from "./5.JPG"
+import list6 from "./6.jpg"
+import list7 from "./7.jpg"
+import list8 from "./8.jpg"
+import list9 from "./9.JPG"
+import list10 from "./10.JPG"
+import list11 from "./11.jpg"
+import list12 from "./12.jpg"
+import list13 from "./13.jpg"
+import list14 from "./14.JPG"
+import list15 from "./15.JPG"
+import list16 from "./16.jpg"
+import list18 from "./17.jpg"
+import list17 from "./18.JPG"
+import list19 from "./19.JPG"
 
 import map from "./map.png"
 import bg1 from "./bg1.png"
@@ -57,12 +50,5 @@ export const GALLERY_IMAGES = [
   list16,
   list18,
   list17,
-  list19,
-  list20,
-  list21,
-  list22,
-  list23,
-  list24,
-  list25,
-  list26
+  list19
 ]

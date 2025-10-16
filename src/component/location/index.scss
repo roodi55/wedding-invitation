@@ -13,6 +13,9 @@
     font-weight: bold;
   }
 
+  .image-wrapper > img{
+    width: 100%;
+  }
   .hr {
     border: none;
     border-top: 0.5px solid var(--point-font-color);
@@ -22,6 +25,7 @@
   }
   .navigation {
     display: flex;
+    margin-top: 0.5rem;
     padding: 0.7rem;
     background-color: var(--white-color);
     border-radius: 5px;
