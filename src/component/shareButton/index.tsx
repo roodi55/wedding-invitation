@@ -38,18 +38,18 @@ export const ShareButton = () => {
                 "//" +
                 window.location.host +
                 baseUrl +
-                "/wedding-invitation/preview_image.png",
+                "wedding-invitation/preview_image.png",
               link: {
                 mobileWebUrl:
                   window.location.protocol +
                   "//" +
                   window.location.host +
-                  baseUrl+"/wedding-invitation",
+                  baseUrl+"wedding-invitation",
                 webUrl:
                   window.location.protocol +
                   "//" +
                   window.location.host +
-                  baseUrl+"/wedding-invitation",
+                  baseUrl+"wedding-invitation",
               },
             },
             buttons: [
