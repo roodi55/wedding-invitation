@@ -68,6 +68,7 @@ export const ShareButton = () => {
               },
             ],
           })
+
         }}
       >
         {/* <img src={ktalkIcon} alt="ktalk-icon" />  */}
