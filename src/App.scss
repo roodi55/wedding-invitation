@@ -21,22 +21,10 @@
   --white-color: #ffffff;
 
   // check
-  // --theme-bg-color: #F3F2D9;
   --alt-color: #6f7757;
-  // --alt-bg-color: #f4f0f0;
-
-  // --dark-color: #282c34;
- 
-  // --light-grey-color: #eaeaea;
   --light-color: #F4EEE3;
-  
   --red-color: #ff0000;
 
-  // --dark-font-color: #626C46;
-  // --font-color:#535B3E;
-
-  // --point-color:#5D7F66;
-  // --blue-color: #B4CBD0;
 
   display: flex;
   justify-content: center;
@@ -55,8 +43,6 @@
 $colors: (
   theme-color: var(--theme-color),
   theme-bg-color: var(--theme-bg-color),
-  // alt-color: var(--alt-color),
-  // alt-bg-color: var(--alt-bg-color),
   dark-color: var(--dark-color),
   dark-grey-color: var(--dark-grey-color),
   light-grey-color: var(--light-grey-color),
@@ -184,6 +170,7 @@ body {
             animation-name: lazy-fade-in;
             animation-duration: 3s;
             opacity: 1;
+            padding: 2rem;
           }
 
           @media print {
@@ -222,7 +209,7 @@ h2 {
   color: var(--font-color);
   font-weight: normal;
   &.english {
-    font-family: "Allura";
+    // font-family: "Allura";
   }
 }
 

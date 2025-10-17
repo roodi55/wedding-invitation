@@ -9,11 +9,11 @@ export const Location = () => {
   return (
     <>
       <LazyDiv className="card location">
-        <h3>오시는길</h3>
+        <h3>오시는길</h3><br/>
         <div className="addr">
-          {LOCATION}
-          <div className="detail">{LOCATION_ADDRESS}</div>
-        </div>
+          {LOCATION}<br/>
+          {LOCATION_ADDRESS}
+        </div><br/>
         <div className="image-wrapper">
           <img src={MAP} alt="sample" />
         </div>
@@ -62,8 +62,8 @@ export const Location = () => {
             ▪️만차 시 발렛으로 외부 주차 (2시간 30분 무료)
             <br />
             <br />
-            <div className="added">예식 후 출차 시 웨딩홀 입구에서 셔틀버스 탑승 후</div>
-            <div className="added">외부 주차장으로 이동 (5분 소요)</div>
+            <div className="added">예식 후 출차 시 웨딩홀 입구에서 셔틀버스 탑승 후<br/>
+            외부 주차장으로 이동 (5분 소요)</div>
           </div>
         </div>
         <div className="hr" />
