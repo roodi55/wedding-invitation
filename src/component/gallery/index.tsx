@@ -31,7 +31,7 @@ type DragOption = {
 type ClickMove = "left" | "right" | null
 
 export const Gallery = () => {
-  const { openModal, closeModal } = useModal()
+  // const { openModal, closeModal } = useModal()
   const carouselRef = useRef<HTMLDivElement>({} as HTMLDivElement)
 
   useEffect(() => {
@@ -182,32 +182,54 @@ export const Gallery = () => {
     [dragging],
   )
 
-  const onTouchMove = useCallback(
-    (e: TouchEvent) => {
-      const status = statusRef.current
+  // const onTouchMove = useCallback(
+  //   (e: TouchEvent) => {
+  //     const status = statusRef.current
 
-      if (status === "clicked") {
-        e.preventDefault()
-        const xMove =
-          e.targetTouches[0].clientX - dragOptionRef.current.startingClientX
-        const yMove =
-          e.targetTouches[0].clientY - dragOptionRef.current.startingClientY
-        if (Math.abs(xMove) > DRAG_SENSITIVITY) {
-          setStatus("dragging")
-        } else if (Math.abs(yMove) > DRAG_SENSITIVITY) {
-          setStatus("clickCanceled")
-        }
-      } else if (status === "dragging") {
-        e.preventDefault()
-        dragging(
-          dragOptionRef.current,
-          e.targetTouches[0].clientX,
-          carouselRef.current.clientWidth,
-        )
+  //     if (status === "clicked") {
+  //       e.preventDefault()
+  //       const xMove =
+  //         e.targetTouches[0].clientX - dragOptionRef.current.startingClientX
+  //       const yMove =
+  //         e.targetTouches[0].clientY - dragOptionRef.current.startingClientY
+  //       if (Math.abs(xMove) > DRAG_SENSITIVITY) {
+  //         setStatus("dragging")
+  //       } else if (Math.abs(yMove) > DRAG_SENSITIVITY) {
+  //         setStatus("clickCanceled")
+  //       }
+
+  //     } else if (status === "dragging") {
+  //       e.preventDefault()
+  //       dragging(
+  //         dragOptionRef.current,
+  //         e.targetTouches[0].clientX,
+  //         carouselRef.current.clientWidth,
+  //       )
+  //     }
+  //   },
+  //   [dragging],
+  // )
+
+  const onTouchMove = useCallback((e: TouchEvent) => {
+    const touch = e.targetTouches[0];
+    const deltaX = touch.clientX - dragOptionRef.current.startingClientX;
+    const deltaY = touch.clientY - dragOptionRef.current.startingClientY;
+  
+    const status = statusRef.current;
+  
+    if (status === "clicked") {
+      if (Math.abs(deltaY) > Math.abs(deltaX)) {
+        setStatus("clickCanceled"); // 수직 스크롤 허용
+      } else if (Math.abs(deltaX) > DRAG_SENSITIVITY) {
+        e.preventDefault(); 
+        setStatus("dragging");
       }
-    },
-    [dragging],
-  )
+    } else if (status === "dragging") {
+      e.preventDefault(); // 슬라이드 중이면 계속 막기
+      dragging(dragOptionRef.current, touch.clientX, carouselRef.current.clientWidth);
+    }
+  }, [dragging]);
+  
 
   const onMouseTouchUp = useCallback(() => {
     const status = statusRef.current
