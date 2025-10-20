@@ -6,8 +6,8 @@ import fs from "fs"
 import pkg from "./package.json"
 import { createHtmlPlugin } from "vite-plugin-html"
 import {
-  GROOM_FULLNAME,
-  BRIDE_FULLNAME,
+  GROOM_FIRSTNAME,
+  BRIDE_FIRSTNAME,
   WEDDING_DATE,
   LOCATION,
 } from "./src/const"
@@ -31,8 +31,8 @@ export default defineConfig({
     createHtmlPlugin({
       inject: {
         data: {
-          GROOM_FULLNAME,
-          BRIDE_FULLNAME,
+          GROOM_FIRSTNAME,
+          BRIDE_FIRSTNAME,
           DESCRIPTION: `${WEDDING_DATE.format("M월 D일 A h시")} ${LOCATION}`,
         },
       },
@@ -42,8 +42,8 @@ export default defineConfig({
       writeBundle() {
         const content = fs.readFileSync("public/manifest.json", "utf-8")
         const processed = content
-          .replace(/<%= GROOM_FULLNAME %>/g, GROOM_FULLNAME)
-          .replace(/<%= BRIDE_FULLNAME %>/g, BRIDE_FULLNAME)
+          .replace(/<%= GROOM_FIRSTNAME %>/g, GROOM_FIRSTNAME)
+          .replace(/<%= BRIDE_FIRSTNAME %>/g, BRIDE_FIRSTNAME)
         fs.writeFileSync(`${distFolder}/manifest.json`, processed)
       },
     },

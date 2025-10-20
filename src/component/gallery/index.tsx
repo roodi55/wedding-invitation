@@ -33,6 +33,8 @@ type ClickMove = "left" | "right" | null
 export const Gallery = () => {
   // const { openModal, closeModal } = useModal()
   const carouselRef = useRef<HTMLDivElement>({} as HTMLDivElement)
+  // 이미지 확대
+  const [modalImage, setModalImage] = useState<string | null>(null)
 
   useEffect(() => {
     // preload images
